@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darwin C. Batonghinog Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ 
+<canvas id="galaxy-canvas"></canvas>
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div class="cursor-glow"></div>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<div class="floating-icons">
+    <i class="fab fa-html5"></i>
+    <i class="fab fa-css3-alt"></i>
+    <i class="fab fa-js"></i>
+    <i class="fab fa-python"></i>
+    <i class="fas fa-robot"></i>
+</div>
+
+<div class="chat-button">💬</div>
+
+<div class="chat-box">
+    <div class="chat-header">AI Assistant</div>
+    <div class="chat-messages"></div>
+    <input type="text" id="chatInput" placeholder="Ask me something...">
+</div>
+
+<body>
+
+<header id="navbar">
+    <div class="logo">PI</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#cs-projects">CS Projects</a>
+        <a href="#gallery">CS Gallery</a>
+        <a href="#functional-gallery">Functional Gallery</a>
+    </nav>
+    <button id="themeToggle">🌙</button>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="profile-container">
+            <img id="profilePreview" src="facebookprofile.jpg" class="profile-img">
+            <canvas id="profileStars" class="profile-stars-canvas"></canvas>
+
+            <div class="profile-buttons">
+                <label for="uploadProfile" class="upload-btn">Upload</label>
+                <input type="file" id="uploadProfile" accept="image/*" hidden>
+                <button id="deleteProfile" class="profile-delete-btn">Delete</button>
+            </div>
+        </div>
+
+        <div>
+            <h1>Darwin C. Batonghinog</h1>
+            <h2><span id="typing"></span></h2>
+            <p>Computer Science | BSCS Student</p>
+        </div>
+
+<div class="hero-buttons">
+    <a href="#cs-projects" class="btn-primary">View My Work</a>
+    <a href="#" class="btn-outline">Download Resume</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello, my name is Darwin C. Batonghinog. As an aspiring web developer, I am deeply passionate about creating clean, user-friendly websites that blend simplicity with functionality. My journey into web development has been an exciting exploration of innovation and problem-solving, where I thrive on experimenting with new ideas, rigorously testing prototypes, and continuously expanding my knowledge through hands-on projects.
+        Currently, I am honing my foundational skills in HTML for structuring content, CSS for crafting responsive and aesthetically pleasing designs, and JavaScript for adding interactive elements that enhance user experiences. Beyond the technical aspects, I am driven by a curiosity to understand how digital interfaces can solve real-world problems and improve accessibility for diverse audiences. In my free time, I contribute to open-source repositories and follow industry trends to stay ahead in this ever-evolving field.
+        Looking ahead, I aim to advance into full-stack development, incorporating frameworks like React and Node.js, while pursuing opportunities to collaborate on meaningful web applications. Whether it's building a personal portfolio site or contributing to larger team efforts, I am committed to delivering high-quality, efficient solutions that make a positive impact. I welcome connections with fellow developers and enthusiasts to share insights and grow together.
+    </p>
+</section>
+
+<section id="main-content">
+    <h2 class="experience-heading">Experience</h2>
+    <div class="content-wrapper">
+
+        <!-- LEFT SIDE -->
+        <div class="left-column">
+
+
+
+            <!-- Projects -->
+            <section id="projects">
+                <h2>Recent Projects</h2>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Short description here</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-column">
+
+            <!-- Experience -->
+            <section id="experience">
+                <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <h3>Frontend Developer</h3>
+        <span>2025</span>
+        <p>Freelance</p>
+    </div>
+</div>
+
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Frontend Developer</h3>
+                <span>2025</span>
+                <p>Freelance</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Web Developer Intern</h3>
+                <span>2024</span>
+                <p>Company Name</p>
+            </div>
+        </div>
+
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>Python</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>AI / Machine Learning</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 70%;"></div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>What I Do</h2>
+
+    <div class="services-container">
+        <div class="service-box">
+            <h3>Web Development</h3>
+            <p>I create responsive and modern websites using clean code.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>AI Integration</h3>
+            <p>I build AI-powered solutions for real-world applications.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>UI Optimization</h3>
+            <p>I design smooth user experiences with performance in mind.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="cs-projects">
+    <div class="project-block">
+        <h2>AI SaaS Platform</h2>
+
+        <div class="project-images" id="saasImages">
+            <label for="uploadSaas" class="upload-btn grid-uploader">
+                <span class="label-title">Add Image</span>
+                <span class="label-sub">Click to add image</span>
+                <input type="file" id="uploadSaas" accept="image/*" hidden>
+            </label>
+        </div>
+    </div>
+
+
+    <!-- Workout -->
+    <div class="project-block">
+        <h2>Workout AI Tracker</h2>
+
+        <div class="project-images" id="workoutImages">
+            <label for="uploadWorkout" class="upload-btn grid-uploader">
+                <span class="label-title">Add Image</span>
+                <span class="label-sub">Click to add image</span>
+                <input type="file" id="uploadWorkout" accept="image/*" hidden>
+            </label>
+        </div>
+    </div>
+
+
+    <!-- Certification -->
+    <div class="project-block">
+        <h2>Certification System</h2>
+
+        <div class="project-images" id="certImages">
+            <label for="uploadCert" class="upload-btn grid-uploader">
+                <span class="label-title">Add Image</span>
+                <span class="label-sub">Click to add image</span>
+                <input type="file" id="uploadCert" accept="image/*" hidden>
+            </label>
+        </div>
+        <button class="create-project-btn open-cp-btn" data-list="certProjectsList">+ Create Project</button>
+    </div>
+    <div id="certProjectsList"></div>
+
+</section>
+
+<section id="gallery">
+    <h2>CS Gallery</h2>
+    <div class="gallery-upload-grid" id="galleryImages">
+        <label for="uploadGallery" class="gallery-upload-label grid-uploader">
+            <span class="label-title">Add Image</span>
+            <span class="label-sub">Click to add image</span>
+            <input type="file" id="uploadGallery" accept="image/*" hidden>
+        </label>
+    </div>
+</section>
+
+<!-- FUNCTIONAL GALLERY SECTION -->
+<section id="functional-gallery">
+    <h2>Functional Gallery</h2>
+
+    <div class="functional-video-grid" id="funcVideoGrid">
+        <label for="uploadFuncVideo" class="video-upload-label grid-uploader">
+            <span class="label-title">Add Video</span>
+            <span class="label-sub">Click to add video</span>
+            <input type="file" id="uploadFuncVideo" accept="video/*" hidden>
+        </label>
+    </div>
+</section>
+
+<!-- Shared Create Project Modal — must be before script.js so the IIFE can find it -->
+<div id="createProjectModal" class="cp-modal-overlay" style="display:none;">
+    <div class="cp-modal">
+        <h3>Create New Project</h3>
+        <label class="cp-label">Project Name
+            <input type="text" id="cpName" class="cp-input" placeholder="e.g. My Project">
+        </label>
+        <label class="cp-label">Description
+            <textarea id="cpDesc" class="cp-textarea" placeholder="Short description of this project..."></textarea>
+        </label>
+        <div class="cp-modal-actions">
+            <button id="cpCancel" class="cp-btn-cancel">Cancel</button>
+            <button id="cpCreate" class="cp-btn-create">Create</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+const dots = document.querySelectorAll(".timeline-dot");
+
+dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+        dot.classList.toggle("checked");
+    });
+});
+</script>
+
+</body>
+</html>
+
+<footer>
+    <p>© 2026 Darwin Batonghinog C. All Rights Reserved.</p>
+
+    <div class="social-links">
+        <a href="https://PUT-YOUR-LINKEDIN-URL-HERE.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/MiuAsami" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://mail.google.com/mail/?view=cm&to=darwinlolwut@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+    </div>
+</footer>
