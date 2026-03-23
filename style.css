@@ -1389,3 +1389,286 @@ body.modal-open .cp-modal-overlay {
     filter: none;
     pointer-events: all;
 }
+
+/* ===================== HAMBURGER BUTTON ===================== */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===================== MOBILE — 768px ===================== */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav#mainNav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--header-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        z-index: 1050;
+    }
+
+    nav#mainNav.open {
+        display: flex;
+    }
+
+    nav#mainNav a {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 24px 60px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .hero h1 { font-size: 1.6rem; }
+    .hero h2 { font-size: 1rem; }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn-primary, .btn-outline {
+        margin: 0;
+    }
+
+    /* Profile */
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-container::before {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-stars-canvas {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* About */
+    #about {
+        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+
+    #about p {
+        font-size: 14px;
+    }
+
+    /* Main content */
+    #main-content {
+        padding-top: 80px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    /* Skills */
+    #skills {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    /* Services */
+    #services {
+        padding: 40px 20px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* CS Projects */
+    #projects, #cs-projects {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    .project-block h2 {
+        font-size: 24px;
+    }
+
+    /* Project image grid — fluid */
+    .project-images {
+        gap: 16px;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    .project-block label.upload-btn.grid-uploader {
+        width: 100%;
+        height: 160px;
+    }
+
+    /* Gallery */
+    #gallery {
+        padding: 40px 20px;
+    }
+
+    .gallery-upload-grid {
+        gap: 16px;
+    }
+
+    .gallery-upload-label,
+    .gallery-upload-label.grid-uploader {
+        width: 100%;
+        height: 240px;
+    }
+
+    .gallery-image-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    /* Functional Gallery */
+    #functional-gallery {
+        padding: 40px 20px 80px;
+    }
+
+    .video-upload-label,
+    .video-upload-label.grid-uploader {
+        width: 100%;
+        height: 240px;
+    }
+
+    .functional-video-grid {
+        gap: 16px;
+    }
+
+    .video-wrapper {
+        width: 100%;
+    }
+
+    /* Chat */
+    .chat-box {
+        width: calc(100vw - 40px);
+        right: 20px;
+        bottom: 80px;
+    }
+
+    /* Experience timeline */
+    .timeline {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 16px;
+    }
+
+    .social-links a {
+        margin: 0 6px;
+    }
+
+    /* Modal */
+    .cp-modal {
+        padding: 24px 20px;
+        width: 92vw;
+    }
+}
+
+/* ===================== MOBILE — 480px ===================== */
+@media (max-width: 480px) {
+
+    .hero h1 { font-size: 1.35rem; }
+    .hero h2 { font-size: 0.95rem; }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-container::before {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-stars-canvas {
+        width: 130px;
+        height: 130px;
+    }
+
+    .btn-primary, .btn-outline {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+
+    .project-block h2 { font-size: 20px; }
+
+    #gallery h2,
+    #functional-gallery h2 { font-size: 24px; }
+
+    .experience-heading { font-size: 24px; }
+}
