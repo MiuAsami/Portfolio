@@ -998,3 +998,25 @@ setupImageUpload("uploadCert", "certImages");
         this.value = "";
     });
 })();
+
+// ===================== HAMBURGER MENU =====================
+(function () {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('mainNav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close nav when a link is clicked
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
+})();
